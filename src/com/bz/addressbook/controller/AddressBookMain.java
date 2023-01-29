@@ -25,7 +25,7 @@ public class AddressBookMain {
 			
 			byte userChoice=getUserInput.nextByte();
 			switch (userChoice) 
-			{
+			{ 
 			case 1:
 				System.out.println("Creating Contact...");
 				Contacts contacts=getContacts();
