@@ -5,7 +5,7 @@ import com.bz.addressbook.model.Contacts;
 public interface InterfaceAddressBook 
 {
 	int createContacts(Contacts contacts);
-	void showAllContacts();
+	void showAllContacts();//Showing Contacts method
 	
 
 	
