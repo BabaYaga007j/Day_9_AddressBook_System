@@ -55,6 +55,19 @@ public class AddressBookImplementation implements InterfaceAddressBook
 		
 		
 	}
+	public void deleteContacts(String firstName) {
+		int i= findByFirstName(firstName);
+		if (i!=-1)
+		{
+			contactsOfPersons[i]=null;
+		}
+		else
+		{
+			System.out.println("Name Not Found");
+		}
+		showAllContacts();
+		
+	}
 	private void editContactDetails( Contacts contacts) {
 		Contacts con = new Contacts();
 		

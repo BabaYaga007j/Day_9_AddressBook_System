@@ -41,6 +41,12 @@ public class AddressBookMain {
 				String firstName = getUserInput.next();
 				adressBook.updateContacts(firstName);
 				break;
+			case 4:
+				 System.out.println("Enter the first name of details you want to delete");
+				 String firstName1=getUserInput.next();
+				 adressBook.deleteContacts(firstName1);
+				
+				break;
 				
 			default:
 				System.out.println("Invalid Choice");
