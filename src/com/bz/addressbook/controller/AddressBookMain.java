@@ -12,7 +12,6 @@ public class AddressBookMain {
 	private static Scanner getUserInput= new Scanner(System.in);
 	
 	
-	
 	public static void main(String[] args) {
 		InterfaceAddressBook adressBook=new AddressBookImplementation();
 		
@@ -22,20 +21,27 @@ public class AddressBookMain {
 			System.out.println("  ::>>>Adress Book<<<::  ");
 			System.out.println("1.Add New Contcat");
 			System.out.println("2.View All Contacts");
+			System.out.println("3.Update Contact");
+			System.out.println("4.Delete Contact");
 			
 			byte userChoice=getUserInput.nextByte();
 			switch (userChoice) 
 			{ 
 			case 1:
-				System.out.println("Creating Contact...");
+				System.err.println("Creating Contact...");
 				Contacts contacts=getContacts();
 				int index1=adressBook.createContacts(contacts);
 				System.out.println("contacts id :: "+index1);
 				break;
 			case 2:
 				adressBook.showAllContacts();
-				
 				break;
+			case 3:
+				System.out.println("Enter First Name :: ");
+				String firstName = getUserInput.next();
+				adressBook.updateContacts(firstName);
+				break;
+				
 			default:
 				System.out.println("Invalid Choice");
 			}
